@@ -5,3 +5,5 @@ use Illuminate\Support\Facades\Route;
 
 // Bonne méthode de nommer toutes les routes.
 Route::get("/", [SiteController::class, "index"])->name("index");
+
+Route::get("/blade", [SiteController::class, "blade"])->name("blade");

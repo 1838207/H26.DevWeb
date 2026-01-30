@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\View\View;
 
 class SiteController extends Controller
 {
@@ -11,4 +10,7 @@ class SiteController extends Controller
         return view("index");
     }
 
+    public function blade(){
+        return view("blade");
+    }
 }
