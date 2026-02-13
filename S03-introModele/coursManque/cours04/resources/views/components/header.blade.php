@@ -19,7 +19,7 @@
                         <span>S'inscrire</span>
                     </a>
 
-                    <form class="header-form" method="POST">
+                    <form class="header-form" method="GET" action="{{ route('cartes.index')}}">
                         <input
                             type="text"
                             placeholder="Rechercher ..."

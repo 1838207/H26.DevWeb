@@ -88,7 +88,7 @@
                                                 </div>
                                                 <div class="product-content">
                                                     <h6 class="product-name">
-                                                        <a href="#">{{$carte->nom}}</a>
+                                                        <a href="{{ route('cartes.show', ["id" => $carte->id]) }}">{{$carte->nom}}</a>
                                                     </h6>
                                                     <h6 class="product-price">
                                                         <span>{{$carte->prix}}

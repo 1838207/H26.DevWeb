@@ -13,14 +13,23 @@ class CarteController extends Controller
      *
      * @return View
      */
-    public function index() {
+    public function index(Request $request) {
         //$cartes = Carte::all();
         //$categories = Categorie::all();
 
         return view('produits.index', [
             //"cartes" => $cartes si on fait la requête "à parts"
             "cartes" => Carte::all(),
-            "categories" => Categorie::all()
+            "categories" => Categorie::all(),
+            //"recherche" => $request->input('recherche')
+        ]);
+    }
+
+    public function show(int $id) {
+        //dd($id);
+        return view('produits.show', [
+            "categories" => Categorie::all(),
+            "carte" => Carte::findOrFail($id)
         ]);
     }
 
